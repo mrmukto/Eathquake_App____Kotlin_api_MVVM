@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.mrmukto.earthquake.models.EarthquakeModel.Metadata" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:contentPadding="4dp"
+        app:cardElevation="4dp"
+        android:alpha="0.7"
+        app:cardBackgroundColor="@color/purple_200"
+        android:layout_margin="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00BCD4">
+
+            <TextView
+                android:id="@+id/scale"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="29dp"
+                android:textSize="20sp"
+                android:background="#171515"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text=""
+                tools:text="5.6" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:textSize="20sp"
+                android:paddingLeft="13dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="220 km E of Amahai, Indonesia" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="13dp"
+                android:textSize="20sp"
+                android:paddingTop="15dp"
+                android:textColor="#B2DE2DE4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@{item.title}" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
